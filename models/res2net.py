@@ -216,10 +216,3 @@ def res2net152_v1b_26w_4s(pretrained=False, **kwargs):
     if pretrained:
         model.load_state_dict(model_zoo.load_url(model_urls['res2net152_v1b_26w_4s']))
     return model
-
-
-if __name__ == '__main__':
-    images = torch.rand(1, 3, 224, 224).cuda(0)
-    model = res2net50_v1b_26w_4s(pretrained=True)
-    model = model.cuda(0)
-    print(model(images).size())
