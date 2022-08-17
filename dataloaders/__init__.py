@@ -25,7 +25,6 @@ def make_dataset(opt, mode):
 
         if opt.isTrain:
             # during training process, we only use the pseudo edema area
-            # ablation study
             gt_dir = os.path.join(opt.checkpoints_dir, opt.dataset_name, 'pseudo_mask', opt.model, opt.phase)
         else:
             # ground truth for testing
